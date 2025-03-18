@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update Attendance</title>
+</head>
+<body>
+<h3 align="center"><u>Attendance Management System</u></h3>
+<a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+<a href="addattendance.html">Add Attendance</a>&nbsp;&nbsp;&nbsp;
+<a href="ViewAttendanceServlet">View All Attendance</a>&nbsp;&nbsp;&nbsp;
+<a href="updateattendance.html">Update Attendance</a>&nbsp;&nbsp;&nbsp;
+<a href="#">Delete Attendance</a>
+<h3 align="center"><u>Updating Attendance</u></h3>
+
+<form align="center" method="post" action="UpdateAttendanceServlet">
+Enter Employee ID&nbsp;&nbsp;<input type="text" name="employeeid" required/><br></br>
+Enter Employee Name&nbsp;&nbsp;<input type="text" name="employeename" required/><br></br>
+Attendance Days&nbsp;&nbsp;<input type="number" name="attendancedays" step="1" required/><br></br>
+<input type="submit" name="submit" value="Update"/>
+</form>
+</body>
+</html>

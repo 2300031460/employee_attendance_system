@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Attendance</title>
+<style>
+  /* General body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  /* Center the form and heading */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* Form container */
+  form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  /* Table styles */
+  table {
+    width: 100%;
+  }
+
+  /* Table row and cell styles */
+  td {
+    padding: 10px 5px;
+    vertical-align: middle;
+  }
+
+  /* Label styles */
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Input styles */
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Button styles */
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+  }
+
+  input[type="reset"] {
+    background-color: #d9534f;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  input[type="reset"]:hover {
+    background-color: #c9302c;
+  }
+</style>
+</head>
+<body>
+  <!-- Navigation Links at the Top -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+    <a href="addattendance.html">Add Attendance</a>&nbsp;&nbsp;&nbsp;
+    <a href="ViewAttendanceServlet">View All Attendance</a>
+  </div>
+
+  <h3><u>Attendance Management System</u></h3>
+  <h3>Add Employee Attendance</h3>
+
+  <!-- Attendance Form -->
+  <form method="post" action="addattendance">
+    <table>
+      <tr>
+        <td><label for="employeeid"><b>Employee ID:</b></label></td>
+        <td><input type="text" name="employeeid" required/></td>
+      </tr>
+      <tr>
+        <td><label for="employeename"><b>Employee Name:</b></label></td>
+        <td><input type="text" name="employeename" required></td>
+      </tr>
+      <tr>
+        <td><label for="department"><b>Department:</b></label></td>
+        <td>
+          <select name="department" required>
+            <option value="">--Select--</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Sales">Sales</option>
+            <option value="Finance">Finance</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="date"><b>Date:</b></label></td>
+        <td><input type="date" name="date" required></td>
+      </tr>
+      <tr>
+        <td><label for="status"><b>Status:</b></label></td>
+        <td>
+          <select name="status" required>
+            <option value="">--Select--</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="On Leave">On Leave</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Add Attendance">
+          <input type="reset" value="Clear">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
